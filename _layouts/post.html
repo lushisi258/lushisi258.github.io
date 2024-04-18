@@ -1,5 +1,6 @@
 <!-- post的页面布局 -->
+<link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
 <div class="post-full">
   <h2>{{ page.title }}</h2>
-  {{ page.content }}
+  <p class="content">{{ page.content }}</p>
 </div>

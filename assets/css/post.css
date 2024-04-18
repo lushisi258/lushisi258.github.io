@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'SentyTeaFont';
+    src: url('../../res/fonts/HanyiSentyTea.ttf') format('truetype');
+  }
+  
+/* 文章内容样式 */
+p {
+    font-family: "SentyTeaFont", "宋体", "SimSun", serif;
+    color: #000000;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: large;
+}
