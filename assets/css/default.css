@@ -2,14 +2,4 @@ body {
     background-color: #F4F6F9;
     font-family: Arial, sans-serif;
   }
-  .post-excerpt {
-    /* 这些样式会应用到首页的文章摘要 */
-    background-color: #FFFFFF;
-    border: 1px solid #ccc;       /* 添加边框 */
-    padding: 1em;                   /* 添加内边距 */
-    margin-left: 100px;             /* 添加左外边距 */
-    margin-right: 100px;            /* 添加右外边距 */
-    margin-bottom: 1em;             /* 添加下外边距 */
-    height: 10em;                   /* 限制文章摘要的高度为6行 */
-    overflow: hidden;               /* 隐藏溢出的内容 */
-  }
+
