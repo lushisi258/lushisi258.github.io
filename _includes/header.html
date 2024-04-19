@@ -1,13 +1,11 @@
 <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
 
 <header>
-  <div class="header">
     <h1>{{ site.title }}</h1>  
     <nav>
       <ul>
-        {% for link in site.nav %}
+        {% for nav in site.nav %}
           <li><a href="{{ nav.url }}">{{ nav.title }}</a></li>
         {% endfor %}
       </ul>
-  </div>
 </header>
