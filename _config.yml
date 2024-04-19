@@ -1,4 +1,4 @@
-title: Ldx
+title: Li Dingxin
 email: li_ding_xin@foxmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   网站简介
@@ -7,3 +7,9 @@ url: "http://blog.lidingxin.top/" # the base hostname & protocol for your site, 
 # Build settings
 plugins:
   - jekyll-feed
+#导航栏
+nav:
+  - title: 主页
+    url: /
+  - title: 博客
+    url: /blog

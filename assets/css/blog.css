@@ -1,0 +1,25 @@
+a.no-underline{
+  color: black;
+  text-decoration: none;
+}
+a.no-underline:active{
+  color: #404040;
+  text-decoration: none;
+}
+.post-excerpt {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid;
+  border-bottom-color: #F4F6F9;
+  padding: 1em;                   /* 添加内边距 */
+  padding-bottom: 5em;
+  margin-left: 200px;             /* 添加左外边距 */
+  margin-right: 200px;            /* 添加右外边距 */
+  height: 8.3em;                  /* 限制文章摘要的高度为5行 */
+  overflow: hidden;               /* 隐藏溢出的内容 */
+}
+.post-excerpt p {
+  font-family: "黑体", "Heiti", sans-serif;
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}

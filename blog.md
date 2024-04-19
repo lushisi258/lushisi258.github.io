@@ -1,8 +1,8 @@
 ---
-title: Ldx's Blog
+title: Li Dingxin's Blog
 layout: default
 ---
-<link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
 
 
 {% for post in site.posts %}

@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'SentyTeaFont';
+    src: url('/res/fonts/HanyiSentyTea.ttf') format('truetype');
+  }
+ 
+/*网站标题样式*/
+h1{
+    color: #000000;
+    font-family: "SentyTeaFont", "宋体", sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+    padding-left: 50px;
+}
+/*导航栏格式*/
+nav ul {
+    list-style-type: none; /* 移除列表项前的标记 */
+    padding: 0; /* 移除内边距 */
+  }
+  
+  nav li {
+    display: inline-block; /* 设置列表项为内联块元素 */
+    margin-right: 20px; /* 在列表项之间添加一些间距 */
+  }
+/*header的整体设计*/
+.header{
+    background-color: #FFFFFF;
+    padding-bottom: 20px;
+}
+h1, nav {
+    display: inline-block; /* 设置标题和导航为内联块元素 */
+  }
