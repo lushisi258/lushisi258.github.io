@@ -5,7 +5,8 @@
     <nav>
       <ul>
         {% for nav in site.nav %}
-          <li><a href="{{ nav.url }}">{{ nav.title }}</a></li>
+          <li><a href="{{ nav.url }}" {% if page.url == nav.url %}class="current"{% endif %}>
+            {{ nav.title }}</a></li>
         {% endfor %}
       </ul>
 </header>
