@@ -2,14 +2,17 @@ title: Li Dingxin
 email: li_ding_xin@foxmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   网站简介
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.lidingxin.top/" # the base hostname & protocol for your site, e.g. http://example.com
-# Build settings
+# 网站的基础url
+url: "http://www.lidingxin.top/" 
+# 插件
 plugins:
   - jekyll-feed
-#导航栏
+# 导航栏
 nav:
   - title: 主页
     url: /
   - title: 博客
-    url: /blog
+    url: /blogs
+# 其他页面
+include:
+  - _pages

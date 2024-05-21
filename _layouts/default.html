@@ -1,13 +1,16 @@
 <!-- 网页的基本布局 -->
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/default.css' | relative_url }}">
 </head>
+
 <body>
   {% include header.html %}
   {{ content }}
   {% include footer.html %}
 </body>
+
 </html>
