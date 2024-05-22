@@ -7,6 +7,7 @@ url: "http://www.lidingxin.top/"
 # 插件
 plugins:
   - jekyll-feed
+  - jekyll-sass-converter
 # 导航栏
 nav:
   - title: 主页
@@ -16,3 +17,5 @@ nav:
 # 其他页面
 include:
   - _pages
+sass:
+  sass_dir: _sass

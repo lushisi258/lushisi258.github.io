@@ -8,9 +8,23 @@
 </head>
 
 <body>
-  {% include header.html %}
-  {{ content }}
-  {% include footer.html %}
+
+  <!-- 大大大笑脸！ -->
+  <div class="smile-face">
+    :)
+  </div>
+  <!-- 内容 -->
+  <div class="content">
+    {{ content }}
+  </div>
+
+  <!-- 终端交互区 -->
+  <div class="terminal">
+    <label class="terminal-label">--></label>
+    <!-- 如果终端的输入框监听到了回车键，把输入框的文字作为参数传递给命令处理函数 -->
+    <input class="terminal-input" name="terminalInput" type="text"
+      onkeydown="if(event.keyCode==13) handleCommand(this.value)">
+  </div>
 </body>
 
 </html>

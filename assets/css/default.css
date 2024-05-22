@@ -1,5 +1,72 @@
-body {
-    background-color: #F4F6F9;
-    font-family: Arial, sans-serif;
-  }
+@font-face {
+    font-family: 'consolas';
+    src: url('/assets/fonts/consola.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ShuSong';
+    src: url('/assets/fonts/ShuSong.ttf') format('truetype');
+}
 
+
+/* 关于笑脸部分的布局 */
+.smile-face {
+    font-family: 'consolas';
+    font-size: 20vmin;
+    left: 10%;
+    top: 20%;
+    position: fixed;
+}
+
+
+/* 关于终端部分的布局 */
+.terminal {
+    top:90%;
+    left: 0%;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    border-top: 2px solid gray;
+    position: fixed;
+}
+
+.terminal-label {
+    right: 95.5%;
+    bottom: 10%;
+    height: 45%;
+    color: black;
+    background-color: white;
+    border: none;
+    font-family: 'consolas';
+    font-size: 4vh;
+    position: absolute;
+}
+
+.terminal-input {
+    right: 0%;
+    bottom: 10%;
+    width: 95%;
+    height: 45%;
+    color: black;
+    background-color: white;
+    border: none;
+    font-family: 'consolas';
+    font-size: 4vh;
+    position: absolute;
+}
+
+.terminal-input:focus {
+    outline: none;
+}
+
+
+/* 关于内容部分的布局 */
+.content {
+    top: 10%;
+    left: 35%;
+    width: 50%;
+    height: 80%;
+    font-family: 'consolas';
+    color: black;
+    background-color: white;
+    position: fixed;
+}
