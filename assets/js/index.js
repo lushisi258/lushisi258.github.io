@@ -1,4 +1,4 @@
-var text = '你好，欢迎来到我的网站。我是Li DingXin，一名大二学生';
+var text = '你好，欢迎来到我的网站。我是Li DingXin，在下面的终端输入“help”来获得一些引导吧😊';
 var index = 0;
 var delay = 150; // 每个字符的延迟时间（毫秒）
 var cursor = document.querySelector('.cursor');
