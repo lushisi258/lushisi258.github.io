@@ -2,12 +2,20 @@
     font-family: 'consolas';
     src: url('/assets/fonts/consola.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'SentySong';
+    src: url('/assets/fonts/SentySong.ttf') format('truetype');
+}
 
+@font-face {
+    font-family: 'ShuSong';
+    src: url('/assets/fonts/ShuSong.ttf') format('truetype');
+}
 
 /* 关于笑脸部分的布局 */
 .smile-face {
-    font-family: 'consolas';
     font-size: 20vmin;
+    font-family: 'consolas';
     left: 10%;
     top: 20%;
     position: fixed;
@@ -16,42 +24,51 @@
 
 /* 关于终端部分的布局 */
 .terminal {
-    top:90%;
-    left: 0%;
-    width: 100%;
-    height: 10%;
-    background-color: white;
-    border-top: 2px solid gray;
+    caret-color: transparent;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgb(220, 220, 220);
+    padding: 10px;
+    bottom: 1vh;
+    height: 5vh;
+    width: 97.5%;
     position: fixed;
 }
 
-.terminal-label {
-    right: 95.5%;
-    bottom: 10%;
-    height: 45%;
-    color: black;
-    background-color: white;
-    border: none;
-    font-family: 'consolas';
-    font-size: 4vh;
-    position: absolute;
+.terminal-text-show {
+    display: block;
+    height: 2.5vh;
+    font-size: 100%;
+    font-family: 'consolas', 'ShuSong';
 }
 
-.terminal-input {
-    right: 0%;
-    bottom: 10%;
-    width: 95%;
-    height: 45%;
-    color: black;
-    background-color: white;
-    border: none;
-    font-family: 'consolas';
-    font-size: 4vh;
-    position: absolute;
+.terminal-text {
+    color: rgb(100, 100, 100);
+    height: 2.5vh;
+    font-size: 100%;
+    font-family: 'consolas', 'ShuSong';
+    width: 100%;
 }
 
-.terminal-input:focus {
-    outline: none;
+.terminal-cursor {
+    display: inline-block;
+    width: 0.5vh;
+    height: 2.5vh;
+    animation: terminal-blink 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes terminal-blink {
+
+    0%,
+    50% {
+        background-color: transparent;
+    }
+
+    51%,
+    100% {
+        background-color: rgb(100, 100, 100);
+    }
 }
 
 

@@ -1,11 +1,5 @@
-@font-face {
-    font-family: 'ShuSong';
-    src: url('/assets/fonts/ShuSong.ttf') format('truetype');
-}
-
-
 #typewriter {
-    font-family: 'ShuSong';
+    font-family: 'SentySong';
     font-style: bold;
     letter-spacing: 3px;
 }
@@ -16,9 +10,10 @@
     width: 0.5em;
     height: 1em;
     background: black;
-    animation: blink 1s steps(2, start) infinite;
+    animation: index-blink 1s steps(2, start) infinite;
+    vertical-align: middle;
 }
 
-@keyframes blink {
+@keyframes index-blink {
     to { visibility: hidden; }
 }
