@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'ShuSong';
+    src: url('/assets/fonts/ShuSong.ttf') format('truetype');
+}
+
+
+.post {
+    font-family: 'ShuSong';
+}

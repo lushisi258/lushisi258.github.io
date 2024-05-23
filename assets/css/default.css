@@ -2,10 +2,6 @@
     font-family: 'consolas';
     src: url('/assets/fonts/consola.ttf') format('truetype');
 }
-@font-face {
-    font-family: 'ShuSong';
-    src: url('/assets/fonts/ShuSong.ttf') format('truetype');
-}
 
 
 /* 关于笑脸部分的布局 */

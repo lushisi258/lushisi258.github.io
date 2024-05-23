@@ -1,10 +1,13 @@
-@font-face{
-    font-family: 'JinKai';
-    src: url('/assets/fonts/JinKai.ttf') format('truetype');
+@font-face {
+    font-family: 'ShuSong';
+    src: url('/assets/fonts/ShuSong.ttf') format('truetype');
 }
 
+
 #typewriter {
-    font-family: 'JinKai';
+    font-family: 'ShuSong';
+    font-style: bold;
+    letter-spacing: 3px;
 }
 
 /* 光标闪烁效果 */
