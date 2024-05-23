@@ -43,7 +43,6 @@
 }
 
 .terminal-text {
-    color: rgb(100, 100, 100);
     height: 2.5vh;
     font-size: 100%;
     font-family: 'consolas', 'ShuSong';
@@ -57,6 +56,7 @@
     vertical-align: middle;
 }
 
+/* 当终端被选中时，光标闪烁 */
 .terminal:focus .terminal-cursor {
     animation: terminal-blink 1s infinite;
 }

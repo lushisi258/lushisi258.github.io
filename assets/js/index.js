@@ -12,6 +12,10 @@ function type() {
         document.getElementById('typewriter').appendChild(cursor);
         setTimeout(type, currentDelay);
     }
+    // 如果已经输入完所有字符，那么将光标隐藏
+    else {
+        cursor.style.display = 'none';
+    }
 }
 
 type();
