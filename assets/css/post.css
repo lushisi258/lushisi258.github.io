@@ -1,4 +1,11 @@
-.post {
-    font-size: 2.5rem;
+p {
+    font-size: 1.5rem;
     font-family: 'ShuSong';
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-family: 'SentySong';
 }

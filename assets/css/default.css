@@ -19,6 +19,11 @@
 }
 
 
+/* 消除a的下划线 */
+a {
+    text-decoration: none;
+}
+
 /* 关于左侧部分的布局 */
 .left-panel {
     font-family: 'consolas';
@@ -57,7 +62,6 @@
 .outside-link {
     width: 24px;
     height: 24px;
-    text-decoration: none;
     display: inline-block;
     background-size: cover;
 }
@@ -114,11 +118,12 @@
 
 /* 关于内容部分的布局 */
 .content {
-    top: 10%;
+    top: 5%;
     left: 35%;
     width: 50%;
     height: 80%;
     color: black;
+    overflow: auto;
     position: fixed;
 }
 
