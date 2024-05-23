@@ -2,9 +2,15 @@
     font-family: 'consolas';
     src: url('/assets/fonts/consola.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'SentySong';
     src: url('/assets/fonts/SentySong.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SentyChalk';
+    src: url('/assets/fonts/SentyChalk.ttf') format('truetype');
 }
 
 @font-face {
@@ -12,13 +18,57 @@
     src: url('/assets/fonts/ShuSong.ttf') format('truetype');
 }
 
-/* 关于笑脸部分的布局 */
-.smile-face {
-    font-size: 20vmin;
+
+/* 关于左侧部分的布局 */
+.left-panel {
     font-family: 'consolas';
     left: 10%;
-    top: 20%;
+    top: 15%;
     position: fixed;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.smile-face {
+    font-size: 20vmin;
+}
+
+.list-button {
+    border: none;
+    background-color: white;
+    font-family: 'consolas', 'SentyChalk';
+    font-size: 5vmin;
+    margin-left: 1vmin;
+    margin-top: 7vmin;
+    width: 20vmin;
+    border-radius: 10px;
+    display: block;
+}
+
+.list-button:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.outside-links {
+    margin-top: 5vmin;
+    margin-left: 6.6vmin;
+    display: block;
+}
+
+.outside-link {
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+    display: inline-block;
+    background-size: cover;
+}
+
+#github-link {
+    background-image: url('/assets/images/svg/github.svg');
+}
+
+#email-link {
+    margin-left: 10px;
+    background-image: url('/assets/images/svg/email.svg');
 }
 
 
@@ -61,6 +111,18 @@
     animation: terminal-blink 1s infinite;
 }
 
+
+/* 关于内容部分的布局 */
+.content {
+    top: 10%;
+    left: 35%;
+    width: 50%;
+    height: 80%;
+    color: black;
+    position: fixed;
+}
+
+
 @keyframes terminal-blink {
 
     0%,
@@ -74,13 +136,12 @@
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
 
-/* 关于内容部分的布局 */
-.content {
-    top: 10%;
-    left: 35%;
-    width: 50%;
-    height: 80%;
-    color: black;
-    position: fixed;
+    to {
+        opacity: 1;
+    }
 }
