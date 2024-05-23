@@ -2,13 +2,20 @@ var terminalElement = document.querySelector('.terminal');
 var terminalShow = document.querySelector('.terminal-text-show');
 var textElement = terminalElement.querySelector('.terminal-text');
 var terminalCursor = document.querySelector('.terminal-cursor');
+var message = localStorage.getItem('message');
+
+// 初始化show的文本
+if (message) {
+    textElement.textContent = textContent;
+}
 
 // 初始化终端
 function initTerminal() {
+    // 初始化终端的引导文本
     var textContent = '->';
-    var minLength = textContent.length;
-    // 页面加载完成后就显示"->"
     textElement.textContent = textContent;
+    // 保证不会删除掉引导文本
+    var minLength = textContent.length;
     // 设置监听键盘输入
     terminalElement.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
@@ -34,24 +41,6 @@ function initTerminal() {
         event.preventDefault();
     });
 }
-/*
-// 设置网页转换的动画
-barba.init({
-    transitions: [{
-      name: 'opacity-transition',
-      leave(data) {
-        return gsap.to(data.current.container, {
-          opacity: 0
-        });
-      },
-      enter(data) {
-        return gsap.from(data.next.container, {
-          opacity: 0
-        });
-      }
-    }]
-  });
-*/
 
 function handleCommand(command) {
     var commands = command.split(' ');
@@ -59,18 +48,22 @@ function handleCommand(command) {
     var unhappyFace = ':( ';
     switch (commands[0]) {
         case 'help':
-            response = smileFace + "查看文章列表:show all  阅读某篇文章:read yy-mm-dd "
+            response = smileFace + "查看文章列表:cd list"
             break;
-        case 'show':
-            window.location.href = '/articles';
-            break;
-        case 'read':
+        case 'cd':
             if (commands.length > 1) {
-                window.location.href = '/articles/' + article;
-            } else {
-                response = unhappyFace + '请指定日期(yy-mm-dd)或文章名';
+                switch (commands[1]) {
+                    case 'list':
+                        localStorage.setItem('message', '成功跳转列表页ヾ(≧▽≦*)o');
+                        window.location.href = '/_pages/list.html';
+                    case 'home':
+                        localStorage.setItem('message', "成功回到主页(●'◡'●)");
+                        window.location.href = '/';
+                }
             }
             break;
+        default:
+            response = unhappyFace + "错误的命令o(≧口≦)o"
     }
     terminalShow.textContent = response;
 }
