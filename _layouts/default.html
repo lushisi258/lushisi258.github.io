@@ -4,6 +4,29 @@
 
 <head>
   <title>{{ site.title }}</title>
+  <!-- 资源文件的导入 -->
+  <style>
+    @font-face {
+      font-family: 'consolas';
+      src: url('{{ site.oss_base_url }}/fonts/consola.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'SentySong';
+      src: url('{{ site.oss_base_url }}/fonts/SentySong.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'SentyChalk';
+      src: url('{{ site.oss_base_url }}/fonts/SentyChalk.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'ShuSong';
+      src: url('{{ site.oss_base_url }}/fonts/ShuSong.ttf') format('truetype');
+    }
+  </style>
+
   <link rel="stylesheet" href="{{ '/assets/css/default.css' | relative_url }}">
   <!-- 在全部资源加载好之前，网页不可见 -->
   <style>
@@ -26,7 +49,7 @@
     </a>
     <div class="outside-links">
       <a id="github-link" class="outside-link" href="https://github.com/lushisi258" target="_blank"></a>
-      <a id="email-link" class="outside-link" href="mailto:lushisi258@eqq.com"></a>
+      <a id="email-link" class="outside-link" href="mailto:lushisi258@qq.com"></a>
     </div>
   </div>
 

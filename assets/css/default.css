@@ -1,24 +1,3 @@
-@font-face {
-    font-family: 'consolas';
-    src: url('/assets/fonts/consola.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'SentySong';
-    src: url('/assets/fonts/SentySong.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'SentyChalk';
-    src: url('/assets/fonts/SentyChalk.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'ShuSong';
-    src: url('/assets/fonts/ShuSong.ttf') format('truetype');
-}
-
-
 /* 消除a的下划线 */
 a {
     text-decoration: none;

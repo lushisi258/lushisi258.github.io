@@ -17,5 +17,6 @@ nav:
 # 其他页面
 include:
   - _pages
-sass:
-  sass_dir: _sass
+# 阿里云oss
+oss_base_url:
+  - "https://lidingxin-top.oss-cn-beijing.aliyuncs.com"
