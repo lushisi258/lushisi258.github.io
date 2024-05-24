@@ -111,6 +111,7 @@ listButton.addEventListener('click', function (event) {
     fadeOutAndRedirect(listButton.getAttribute('href'));
 });
 
+// 当全部资源加载完毕后，再渲染页面
 window.addEventListener('load', function () {
     document.body.style.visibility = 'visible';
     initTerminal();

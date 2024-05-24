@@ -21,4 +21,6 @@ function type() {
     }
 }
 
-type();
+window.addEventListener('load', function(){
+    type();
+});
