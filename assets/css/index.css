@@ -13,7 +13,3 @@
     animation: index-blink 1s steps(2, start) infinite;
     vertical-align: middle;
 }
-
-@keyframes index-blink {
-    to { visibility: hidden; }
-}

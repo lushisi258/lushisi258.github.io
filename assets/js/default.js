@@ -2,11 +2,15 @@ var terminalElement = document.querySelector('.terminal');
 var terminalShow = document.querySelector('.terminal-text-show');
 var textElement = terminalElement.querySelector('.terminal-text');
 var terminalCursor = document.querySelector('.terminal-cursor');
+/* 获取目录按钮 */
+var listButton = document.querySelector('.list-link');
 var message = localStorage.getItem('message');
+var smileFace = ':) ';
+var unhappyFace = ':( ';
 
 // 初始化show的文本
 if (message) {
-    textElement.textContent = textContent;
+    terminalShow.textContent = smileFace + message;
 }
 
 // 初始化终端
@@ -42,10 +46,17 @@ function initTerminal() {
     });
 }
 
+// 淡出动画并跳转到指定链接
+function fadeOutAndRedirect(url) {
+    document.querySelector('.content').style.animation = 'fadeOut 0.2s forwards ease-in-out';
+    document.querySelector('.content').addEventListener('animationend', function () {
+        window.location.href = url;
+    }, { once: true });
+}
+
+// 处理命令
 function handleCommand(command) {
     var commands = command.split(' ');
-    var smileFace = ':) ';
-    var unhappyFace = ':( ';
     switch (commands[0]) {
         case 'help':
             response = smileFace + "查看文章列表:cd list"
@@ -55,10 +66,14 @@ function handleCommand(command) {
                 switch (commands[1]) {
                     case 'list':
                         localStorage.setItem('message', '成功跳转列表页ヾ(≧▽≦*)o');
-                        window.location.href = '/_pages/list.html';
+                        fadeOutAndRedirect('/_pages/list.html');
+                        break;
                     case 'home':
-                        localStorage.setItem('message', "成功回到主页(●'◡'●)");
-                        window.location.href = '/';
+                        localStorage.setItem('message', "成功加载主页(●'◡'●)");
+                        fadeOutAndRedirect('/');
+                        break;
+                    default:
+                        response = unhappyFace + "错误的命令o(≧口≦)o"
                 }
             }
             break;
@@ -68,5 +83,14 @@ function handleCommand(command) {
     terminalShow.textContent = response;
 }
 
+// 点击目录按钮后淡出动画
+listButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    // 开始淡出动画，然后跳转到新页面
+    fadeOutAndRedirect(listButton.getAttribute('href'));
+});
 
-initTerminal();
+window.addEventListener('load', function () {
+    document.body.style.visibility = 'visible';
+    initTerminal();
+});

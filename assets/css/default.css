@@ -24,13 +24,13 @@ a {
     text-decoration: none;
 }
 
+
 /* 关于左侧部分的布局 */
 .left-panel {
     font-family: 'consolas';
     left: 10%;
     top: 15%;
     position: fixed;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .smile-face {
@@ -125,6 +125,7 @@ a {
     color: black;
     overflow: auto;
     position: fixed;
+    animation: fadeIn 0.2s ease-in-out;
 }
 
 
@@ -141,6 +142,7 @@ a {
     }
 }
 
+/* 淡入淡出动画 */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -148,5 +150,21 @@ a {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes index-blink {
+    to {
+        visibility: hidden;
     }
 }
