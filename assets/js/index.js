@@ -22,5 +22,7 @@ function type() {
 }
 
 window.addEventListener('load', function () {
-    type();
+    document.fonts.ready.then(function () {
+        type();
+    });
 });
