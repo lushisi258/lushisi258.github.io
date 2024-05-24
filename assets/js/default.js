@@ -10,7 +10,12 @@ var unhappyFace = ':( ';
 
 // 初始化show的文本
 if (message) {
-    terminalShow.textContent = smileFace + message;
+    if (window.location.pathname == '/') {
+        // 如果用户在主页
+        terminalShow.textContent = smileFace + "成功加载主页(●'◡'●)";
+    } else {
+        terminalShow.textContent = smileFace + message;
+    }
 }
 
 // 初始化终端
@@ -20,27 +25,43 @@ function initTerminal() {
     textElement.textContent = textContent;
     // 保证不会删除掉引导文本
     var minLength = textContent.length;
+    // 设置一个标志，表示是否正在使用输入法
+    var composing = false;
+    // 当输入法输入开始时，将composing设置为true
+    terminalElement.addEventListener('compositionstart', function (event) {
+        composing = true;
+    });
+    // 当输入法输入结束时，将输入的内容添加到textContent中
+    terminalElement.addEventListener('compositionend', function (event) {
+        composing = false;
+        textContent += event.data;
+        textElement.textContent = textContent;
+        terminalElement.insertBefore(terminalCursor, textElement.nextSibling);
+    });
+
     // 设置监听键盘输入
     terminalElement.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-            // 当按下回车键时，执行handleCommand函数
-            handleCommand(textContent.slice(minLength));
-            // 重新初始化终端
-            initTerminal();
-        }
-        else if (event.key === 'Backspace') {
-            // 只有当textContent的长度大于最小长度时，才允许删除字符
-            if (textContent.length > minLength) {
-                textContent = textContent.slice(0, -1);
+        if (!composing) {
+            if (event.key === 'Enter') {
+                // 当按下回车键时，执行handleCommand函数
+                handleCommand(textContent.slice(minLength));
+                // 重新初始化终端
+                initTerminal();
             }
-        } else if (event.key.length === 1) {
-            textContent += event.key;
-        }
+            else if (event.key === 'Backspace') {
+                // 只有当textContent的长度大于最小长度时，才允许删除字符
+                if (textContent.length > minLength) {
+                    textContent = textContent.slice(0, -1);
+                }
+            } else if (event.key.length === 1) {
+                textContent += event.key;
+            }
 
-        // 更新terminal-text元素的内容为textContent
-        textElement.textContent = textContent;
-        // 将光标添加到terminal-text元素的后面
-        terminalElement.insertBefore(terminalCursor, textElement.nextSibling);
+            // 更新terminal-text元素的内容为textContent
+            textElement.textContent = textContent;
+            // 将光标添加到terminal-text元素的后面
+            terminalElement.insertBefore(terminalCursor, textElement.nextSibling);
+        }
 
         event.preventDefault();
     });
