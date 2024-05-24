@@ -151,20 +151,28 @@ a {
 
 /* 手机端的适配 */
 @media (max-width: 1500px) {
+
     /* 关于左侧部分的布局 */
     .left-panel {
         left: 5%;
         top: 5%;
         display: flex;
     }
+
     .smile-face {
         font-size: 20vmin;
     }
+
     .list-button {
         font-size: 10vmin;
         margin-top: 2vmin;
         margin-left: 10vmin;
         width: 30vmin;
+    }
+
+    .outside-link {
+        width: 48px;
+        height: 48px;
     }
 
     /* 关于终端部分的布局 */
