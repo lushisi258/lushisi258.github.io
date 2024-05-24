@@ -1,6 +1,5 @@
 ---
 layout: post
 title: 我的网站搭建
-date: 2024-05-23 23:50:00 +0800
 categories: jekyll/update
 ---
