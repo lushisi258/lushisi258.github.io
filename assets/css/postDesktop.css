@@ -3,33 +3,33 @@
 }
 
 p {
-    font-size: 3vmin;
+    font-size: 4vmin;
     font-family: 'ShuSong';
     letter-spacing: 1px;
     line-height: 1.2;
 }
 
 h1 {
-    font-size: 5.5vmin;
+    font-size: 9vmin;
     font-family: 'SentyChalk';
 }
 
 h2 {
-    font-size: 5vmin;
+    font-size: 8vmin;
     font-family: 'SentySong';
 }
 
 h3 {
-    font-size: 4.5vmin;
+    font-size: 7vmin;
     font-family: 'SentySong';
 }
 
 h4 {
-    font-size: 4vmin;
+    font-size: 6vmin;
     font-family: 'SentySong';
 }
 
 h5 {
-    font-size: 3.5vmin;
+    font-size: 5vmin;
     font-family: 'SentySong';
 }

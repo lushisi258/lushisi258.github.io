@@ -1,0 +1,15 @@
+.list-h1 {
+    font-family: 'consolas', 'SentyChalk';
+}
+
+.list-ul {
+    margin-top: 30px;
+    column-gap: 15px;
+    font-size: 8vmin;
+}
+
+.list-ul a {
+    color: black;
+    font-size: 6vmin;
+    font-family: 'consolas', 'ShuSong';
+}

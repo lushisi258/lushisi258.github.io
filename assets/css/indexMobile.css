@@ -1,0 +1,16 @@
+#typewriter {
+    font-family: 'SentySong';
+    font-style: bold;
+    letter-spacing: 3px;
+    font-size: 8vmin;
+}
+
+/* 光标闪烁效果 */
+.cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1em;
+    background: black;
+    animation: index-blink 1s steps(2, start) infinite;
+    vertical-align: middle;
+}
