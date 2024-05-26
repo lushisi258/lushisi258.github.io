@@ -3,7 +3,7 @@ var terminalShow = document.querySelector('.terminal-text-show');
 var textElement = terminalElement.querySelector('.terminal-text');
 var terminalCursor = document.querySelector('.terminal-cursor');
 /* 获取目录按钮 */
-var listButton = document.querySelector('.list-link');
+var listButton = document.querySelector('a.list-link');
 var message = localStorage.getItem('message');
 var smileFace = ':) ';
 var unhappyFace = ':( ';
