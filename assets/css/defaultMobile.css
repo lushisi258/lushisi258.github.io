@@ -18,7 +18,7 @@ a {
     font-size: 20vmin;
 }
 
-.list-button {
+.list-link {
     border: none;
     background-color: white;
     font-family: 'consolas', 'SentyChalk';
@@ -30,7 +30,7 @@ a {
     display: block;
 }
 
-.list-button:active {
+.list-link:active {
     background-color: rgb(235, 235, 235);
 }
 
