@@ -15,6 +15,8 @@ if (message) {
         terminalShow.textContent = smileFace + "成功加载主页(●'◡'●)";
     } else {
         terminalShow.textContent = smileFace + message;
+        listButton.textContent = '主 页';
+        listButton.href = '/';
     }
 }
 

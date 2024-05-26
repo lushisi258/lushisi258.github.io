@@ -1,6 +1,7 @@
 /* 消除a的下划线 */
 a {
     text-decoration: none;
+    color: black;
 }
 
 
@@ -16,19 +17,25 @@ a {
     font-size: 20vmin;
 }
 
-.list-button {
+.list-link {
     border: none;
     background-color: white;
     font-family: 'consolas', 'SentyChalk';
     font-size: 5vmin;
     margin-left: 1vmin;
     margin-top: 7vmin;
-    width: 20vmin;
+    padding-left: 3vmin;
+    padding-bottom: 5px;
+    width: 17vmin;
     border-radius: 10px;
     display: block;
 }
 
-.list-button:hover {
+.list-link:active {
+    background-color: rgb(235, 235, 235);
+}
+
+.list-link:hover {
     background-color: rgb(235, 235, 235);
 }
 
@@ -99,7 +106,7 @@ a {
 .content {
     top: 5%;
     left: 35%;
-    width: 50%;
+    width: 55%;
     height: 80%;
     color: black;
     overflow: auto;

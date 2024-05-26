@@ -1,6 +1,7 @@
 /* 消除a的下划线 */
 a {
     text-decoration: none;
+    color: black;
 }
 
 
@@ -29,7 +30,11 @@ a {
     display: block;
 }
 
-.list-button:hover {
+.list-button:active {
+    background-color: rgb(235, 235, 235);
+}
+
+.list-link:hover {
     background-color: rgb(235, 235, 235);
 }
 
