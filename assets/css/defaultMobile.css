@@ -74,6 +74,7 @@ a {
     width: 90%;
     height: 80%;
     color: black;
+    font-size: 5vmin;
     overflow: auto;
     position: fixed;
     animation: fadeIn 0.2s ease-in-out;
