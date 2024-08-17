@@ -4,20 +4,20 @@ var textElement = terminalElement.querySelector('.terminal-text');
 var terminalCursor = document.querySelector('.terminal-cursor');
 /* 获取目录按钮 */
 var listButton = document.querySelector('a.list-link');
-var message = localStorage.getItem('message');
 var smileFace = ':) ';
 var unhappyFace = ':( ';
 
 // 初始化show的文本
-if (message) {
-    if (window.location.pathname == '/') {
-        // 如果用户在主页
-        terminalShow.textContent = smileFace + "成功加载主页(●'◡'●)";
-    } else {
-        terminalShow.textContent = smileFace + message;
-        listButton.textContent = '主 页';
-        listButton.href = '/';
-    }
+if (window.location.pathname == '/') {
+    // 如果用户在主页
+    terminalShow.textContent = smileFace + "成功加载主页(●'◡'●)";
+} else if (window.location.pathname == '/_pages/list.html') {
+    terminalShow.textContent = smileFace + "成功加载文章列表(●'◡'●)";
+    listButton.textContent = '主 页';
+    listButton.href = '/';
+} else {
+    terminalShow.textContent = smileFace + "成功加载文章内容(●'◡'●)";
+    listButton.href = '/_pages/list.html';
 }
 
 // 初始化终端
@@ -88,11 +88,9 @@ function handleCommand(command) {
             if (commands.length > 1) {
                 switch (commands[1]) {
                     case 'list':
-                        localStorage.setItem('message', '成功跳转列表页ヾ(≧▽≦*)o');
                         fadeOutAndRedirect('/_pages/list.html');
                         break;
                     case 'home':
-                        localStorage.setItem('message', "成功加载主页(●'◡'●)");
                         fadeOutAndRedirect('/');
                         break;
                     default:

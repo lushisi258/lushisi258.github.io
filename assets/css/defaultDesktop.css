@@ -113,7 +113,11 @@ a {
     position: fixed;
     animation: fadeIn 0.2s ease-in-out;
 }
-
+/* 图片的大小调整 */
+.content img {
+    max-width: 99%;
+    height: auto;
+}
 
 @keyframes terminal-blink {
 
