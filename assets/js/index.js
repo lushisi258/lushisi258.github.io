@@ -1,5 +1,5 @@
-var textPC = ' 你好，欢迎来到我的网站。我是Li DingXin，点击目录进入文章列表，或者在下面的终端输入“help”来获得一些引导😊';
-var textPhone = ' 你好，欢迎来到我的网站。我是Li DingXin，点击目录进入文章列表，开始探索吧😊';
+var textPC = ' 你好，欢迎来到我的网站。点击目录进入文章列表，或者在下面的终端输入“help”来获得一些引导😊';
+var textPhone = ' 你好，欢迎来到我的网站。点击目录进入文章列表，开始探索吧😊';
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 var text = isMobile ? textPhone : textPC;
 var index = 0;
