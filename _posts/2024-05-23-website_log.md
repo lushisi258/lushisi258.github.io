@@ -2,6 +2,7 @@
 layout: post
 title: 我的网站搭建
 categories: jekyll/update
+tag: [网站]
 ---
 ### 为什么要搭建这个网站
 
